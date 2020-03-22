@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include "PhoneticFinder.hpp"
+// Id of collaborators 208825539 207950577
 
 using namespace std;
 vector<string> split(const string& str, const string& delim)  //https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
@@ -19,7 +20,8 @@ vector<string> split(const string& str, const string& delim)  //https://stackove
     while (pos < str.length() && prev < str.length());
     return tokens;
 }
-
+/** this dictionary gives every letter a specific code which it shares with its similar letters*/
+/** for example b=p=f=2*/
 static vector <int> dict= {1, 2, 3, 4, 5, 2, 6, 7, 8, 6, 3, 9, 10,11, 12 , 2, 3, 13, 14, 4, 12, 15, 15, 16,8 , 14};
 int code(char c){
     if( c>='a' && c<='z')
