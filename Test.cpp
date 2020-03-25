@@ -12,6 +12,7 @@ TEST_CASE("Test replacement of p, f and b") {
     CHECK(find(text, "habby") == string("happy"));
     CHECK(find(text, "hapby") == string("happy"));
     CHECK(find(text, "habpy") == string("happy"));
+    CHECK(find("hello my friends", "  hello")==string ("hello")); // spaces check
 }
 
 TEST_CASE("Test replacement of lower-case and upper-case") {

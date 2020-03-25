@@ -42,6 +42,10 @@ bool checkSim(string word1, string word2){
 namespace phonetic {
     string find( string text, string word){
         vector<string> words= split(text, " ");
+        vector <string> myWord= split(word, " ");
+        if (myWord.size() !=1)
+            throw  runtime_error( "'"+word+"' is not a legal word");
+        word= myWord[0];
         for( int i=0; i< words.size(); i++){
             if( words[i].length() == word.length()){
                 if(checkSim(words[i], word))
